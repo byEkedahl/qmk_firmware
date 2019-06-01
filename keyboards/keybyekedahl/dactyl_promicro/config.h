@@ -19,25 +19,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 #include "config_common.h"
-#define PRODUCT         Dactyl Single Controller (6x12)
+#define PRODUCT         Dactyl Ergo(6x6)
 
 /* key matrix size */
 // Rows are doubled-up
-#define MATRIX_ROWS 6
-#define MATRIX_COLS 12
+#define MATRIX_ROWS 12
+#define MATRIX_COLS 6
 
-// wiring
-#define MATRIX_ROW_PINS { D3, D2, D1, D0, D4, C6 }
-#define MATRIX_COL_PINS { D7, E6, B4, B5, F4, F5, F6, F7, B1, B3, B2, B6 }
-#define UNUSED_PINS
+// wiring of each half
+#define MATRIX_COL_PINS { D4, C6, D7, E6, B4, B5 }
+#define MATRIX_ROW_PINS { F6, F7, B1, B3, B2, B6 }
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x3060
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    byEkedahl
+//#define MANUFACTURER    tshort
 // defined in subfolder
-#define DESCRIPTION     A split keyboard with a single promicro controller
+#define DESCRIPTION     A split keyboard
 
 /* mouse config */
 #define MOUSEKEY_INTERVAL       20
@@ -50,7 +49,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DEBOUNCING_DELAY 5
 
 /* serial.c configuration for split keyboard */
-//#define SOFT_SERIAL_PIN D0
+#define SOFT_SERIAL_PIN D0
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
@@ -61,9 +60,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PERMISSIVE_HOLD
 
 /* ws2812 RGB LED */
-//#define RGB_DI_PIN D3
+#define RGB_DI_PIN D3
 
-//#define RGBLED_NUM 12    // Number of LEDs
+#define RGBLED_NUM 12    // Number of LEDs
 
 /*
  * Feature disable options
